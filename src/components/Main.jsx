@@ -1,9 +1,10 @@
 import React from 'react'
 import reactLogoGrey from '../assets/react-grey.png'
 
-function Main() {
+function Main(props) {
+    const {darkMode} = props
     return (
-        <main className='main'>
+        <main className={`main ${darkMode ? `main--dark` : `main--ligth`}`}>
             <h2 className='main__title'>
             Fun facts about React
             </h2>

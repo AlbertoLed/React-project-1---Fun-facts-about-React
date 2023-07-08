@@ -4,10 +4,21 @@ import Navbar from './components/Navbar.jsx'
 import Container from './components/Main.jsx'
 
 function App() {
+  const [darkMode, setDarkMode] = React.useState(false)
+
+  function toggleDarkMode() {
+    setDarkMode(prev => !prev)
+  }
+
   return (
     <>
-      <Navbar />
-      <Container />
+      <Navbar
+        darkMode={darkMode}
+        toggleDarkMode={toggleDarkMode}
+      />
+      <Container 
+        darkMode={darkMode}
+      />
     </>
   )
 }
